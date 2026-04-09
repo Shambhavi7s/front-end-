@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <div class="header">
+        <div class="container">
+            <nav>
+                <img src="logo.png" class="logo">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>Front-End Developer</p>
+                <h1>Hi, I'm <span>Shambhavi</span> <br>Shukla from India.</h1>
+            </div>
+
+        </div>
+
+    </div>
+<!----------about page-------->
+    <div id="aboutpg">
+        <div class="container">
+            <div  class="row">
+                <div id="column1">
+                    <img src="imgp1.jfif">
+                </div>
+                <div id="column2">
+                    <h1 class="subtitle">About Me</h1>
+                    <p>I'm a Front-End Developer passionate about building clean, responsive and user-friendly web interfaces using <strong style = "color: orangered;">HTML, CSS and JavaScript</strong>. I enjoy turning ideas into visually appealing websires while keeping performace and usability in mind.</p>
+                    <div class="tab-titles">
+                        <p class="tab-link active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-link" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-link" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>HTML</span><br>Structuring web pages</li>
+                            <li><span>CSS</span><br>Responsive and modern layouts</li>
+                            <li><span>JavaScript</span><br>Basic DOM and logic building</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>July  2024 - Sept 2024</span><br>Front-End Developer Intern(Remote) at Urgent IT Solution, Noida.</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2021 - 2025</span><br> B.Tech from Computer Science at Indus Institute of Technology and Management</li>
+                            <li><span>2020 - 2021</span><br>Intermediate from Mother Teresa Mission Higher Secondary School, Kanpur.</li>
+                            <li><span>2018 - 2019</span><br>High School from Mother Teresa Mission Higher Secondary School, Kanpur.</li>
+                        </ul>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+         
+    </div>
+<!----------portfolio   ------>
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">My Projects</h1>
+        <div class="worklist">
+            <div class="work">
+                <img src="workk1.jfif">
+                <div class="layer">
+                    <h3>Personal Portfolio Website</h3>
+                    <p>A responsive personal portfolio website built using HTML, CSS and JavaScript to showcase my skills, projects, and contact information.</p>
+                    <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+
+            </div>
+            <div class="work">
+                <img src="workk.jfif">
+                <div class="layer">
+                    <h3>Cravely</h3>
+                    <p>Built a food blog platform focusing on layout design, content presentation, and responsiveness using HTML, CSS and JavaScript.</p>
+                    <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+<!---------contact------->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="left-col">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fa-solid fa-paper-plane"></i>contact@example.com</p>
+                <p><i class="fas fa-phone"></i>Phone Number</p>
+                <div class="social_icons">
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-telegram"></i></a>
+                </div>
+                <a href="#" class="btn btn2">Download CV</a>
+            </div>
+            <div class="right-col">
+                <form>
+                    <input type="text" name="Name" placeholder="Enter Your Name" required>
+                    <input type="email" name="email" placeholder="Enter your Email" required>
+                    <textarea name="message" rows="8" placeholder="Type your Message...." ></textarea>
+                    <button type="submit" class="btn btn2" style="color:black">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>Copyright &copy; .My Portfolio </p>
+    </div>
+</div>
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+
+</script>
+</body>
+</html>
